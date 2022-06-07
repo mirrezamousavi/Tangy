@@ -6,15 +6,10 @@
   <DangerChildContent>Danger Content from Render Fragement! WooHoo</DangerChildContent>
 </_ChildComponent>
 <p><b>@messageText</b></p>
-<_AnotherChildComponent InputAttributes="InputAttributes"></_AnotherChildComponent>
+<_AnotherChildComponent placeholder="Placeholder from Parent"></_AnotherChildComponent>
 @code {
 
-    public Dictionary<string, object> InputAttributes { get; set; } = new Dictionary<string, object>()
-    {
-        {"required","required"},
-        {"placeholder","Enter Name From Parent"},
-        {"maxlength","10"},
-    };
+    
     public string messageText = "";
 
     private void ShowMessage()
