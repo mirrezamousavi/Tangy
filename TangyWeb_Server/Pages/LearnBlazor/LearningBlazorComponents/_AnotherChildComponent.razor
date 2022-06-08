@@ -1,6 +1,6 @@
 ﻿<div>
     <h4 class="text-primary pt-3">Another Child Component</h4>
-    <input id="nametemp" placeholder="Child Placeholder" @attributes="InputAttributes" />
+    <input id="nametemp" @attributes="InputAttributes" placeholder="Child Placeholder"/>
 </div>
 
 @code {
@@ -19,5 +19,5 @@
     //    {"maxlength","5"},
     //};
     [Parameter(CaptureUnmatchedValues = true)]
-    public Dictionary<string,object> InputAttributes { get; set; } = new Dictionary<string, object>();
+    public Dictionary<string, object> InputAttributes { get; set; } = new Dictionary<string, object>();
 }
