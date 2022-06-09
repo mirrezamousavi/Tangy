@@ -1,20 +1,20 @@
-﻿
+﻿@inject IJSRuntime _JsRuntime
 <div>
     <div class="alert alert-info">@Title</div>
     <div class="alert alert-success">
         @if (DangerChildContent != null)
         {
-            <span>@DangerChildContent</span>
+                <span>@DangerChildContent</span>
         }
         else
         {
             @if (ChildContent != null)
             {
-                    <span>@ChildContent</span>
+                            <span>@ChildContent</span>
             }
             else
             {
-                    <span>Hello, from Empty Render Fragment</span>
+                            <span>Hello, from Empty Render Fragment</span>
             }
         }
     </div>
@@ -36,4 +36,9 @@
 
     [Parameter]
     public EventCallback OnButtonClick { get; set; }
+
+    public async Task ToastrSuccess()
+    {
+        await _JsRuntime.ToastrSuccess("Operation Successful");
+    }
 }
