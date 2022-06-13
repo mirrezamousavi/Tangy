@@ -19,14 +19,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach (var obj in categories)
+                    @foreach (var objCat in categories)
                     {
                                 <tr>
                                     <td>
-                                        @obj.Name
+                                        @objCat.Name
                                     </td>
                                     <td>
-                                        <NavLink href="" class="btn btn-primary">Edit</NavLink>
+                                        <NavLink href="@($"category/edit/{objCat.Id}")" class="btn btn-primary">Edit</NavLink>
                                     </td>
                                 </tr>
                     }
